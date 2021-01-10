@@ -46,20 +46,28 @@ If repeat infmarmaiton files are privided, our method filter SV candisates with 
 Please prepare anntaiton files with the fllowing procedures.
 
 Repeat masker (Simple_repeat indetified by Repeat masker)　　
-Download rmsk.txt from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/　　
+Download rmsk.txt from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/
+```
 grep Simple_repeat <path to rmsk.txt>|python .src/repeat/rmsk.py /dev/stdin > ./data/rmsk.txt
+```
 
 Tandem repeat
 Download simpleRepeat.txt from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/　　
+```
 python ./src/repeat/simpleRepeat.py <path to simpleRepeat.txt>|sort -k1,1 -k2,2g > ./data/simplerepeat.txt　　
+```
   
 Segmental duplication　　
 Download genomicSuperDups.txt from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/　　
+```
 python ./src/repeat/seg_dup.py <path to genomicSuperDups.txt>|sort -k1,1 -k2,2g > ./data/seg_dup.txt
+```
 
 Self-chain　　
 Download chainSelf.txt file from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/　　
+```
 python .src/repeat/ucsc_selfchain.py <path to chainSelf.txt> | sort -k1,1 -k2,2g > ./data/chainSelf.txt
+```
 
 ## Preformance
 Performance of this tool is provided in Fujimoto et al. (in rivision).
