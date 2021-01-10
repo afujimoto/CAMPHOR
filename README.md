@@ -23,7 +23,7 @@ vcf file of SVs (SV.vcf)
 
 ## Usage
 cd <path to CAMPHOR>　　
-sh CAMPHOR.sh ¥<bam(sorted by read name)> ¥<bam(sorted by genome coordinate)> ¥<fastq> ¥<output>　　
+sh CAMPHOR.sh <bam(sorted by read name)> <bam(sorted by genome coordinate)> <fastq> <output>　　
 
 ## Example
 git clone https://github.com/afujimoto/CAMPHOR.git　　
