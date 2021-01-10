@@ -22,15 +22,17 @@ samtools (0.1.18 or higher)
 vcf file of SVs (SV.vcf)
 
 ## Usage
+```
 cd <path to CAMPHOR>　　
 sh CAMPHOR.sh <bam(sorted by read name)> <bam(sorted by genome coordinate)> <fastq> <output>　　
+```
 
 ## Example
+```
 git clone https://github.com/afujimoto/CAMPHOR.git　
-
 cd CAMPHOR　　
-
 sh CAMPHOR.sh <> <> <> <>
+```
 
 ## Parameter setting in configuration file
 We consider the parameter set in the provided configuration apprppreate for 20x coverage WGS data.　　
