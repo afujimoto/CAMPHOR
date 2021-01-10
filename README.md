@@ -26,8 +26,10 @@ cd <path to CAMPHOR>　　
 sh CAMPHOR.sh <bam(sorted by read name)> <bam(sorted by genome coordinate)> <fastq> <output>　　
 
 ## Example
-git clone https://github.com/afujimoto/CAMPHOR.git　　
+git clone https://github.com/afujimoto/CAMPHOR.git　
+
 cd CAMPHOR　　
+
 sh CAMPHOR.sh <> <> <> <>
 
 ## Parameter setting in configuration file
