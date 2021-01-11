@@ -3,7 +3,7 @@ SV caller for long-reads
 
 Overview
 1. Extract reads suggesting SVs from a bam file　　
-2. Idetify SV candidates      　 
+2. Identify SV candidates      　 
 3. Filter SV candidates with repeat information and number of support reads　　
 
 ## Requirement
@@ -15,11 +15,11 @@ perl
 samtools (0.1.18 or higher)
 
 ## Input file
-** Two bam files (bam sorted by read name and bam sorted by genome coordinate)        
+** Two bam files (one bam sorted by read name and another sorted by genome coordinates)        
 ** Index file (.bai) for bam file sorted by genome coordinate         
 ** Fastq file of the sequence data
 
-If samtools is not installed in the environment, the path to execution file of samtools can be specified in the config file (pram.config).  
+If samtools is not installed in the environment, the path to the execution file of samtools can be specified within the config file (pram.config).  
 
 ## Output file format
 vcf file of SVs (SV.vcf)
@@ -27,7 +27,7 @@ vcf file of SVs (SV.vcf)
 ## Usage
 ```
 cd <path to CAMPHOR>　　
-sh CAMPHOR.sh <bam(sorted by read name)> <bam(sorted by genome coordinate)> <fastq> <output directory>　　
+sh CAMPHOR.sh <bam(sorted by read name)> <bam(sorted by genome coordinate)> <fastq> <output>　　
 ```
 
 ## Example
@@ -38,16 +38,16 @@ sh CAMPHOR.sh ./example/NA18943.chr22.sort_by_name.test.bam ./example/NA18943.ch
 ```
 
 ## Parameter setting in configuration file
-We consider the parameter set in the provided configuration apprppreate for 20x coverage WGS data.  
+We consider the parameter set in the provided configuration appropriate for 20x coverage WGS data.  
 If you would like to use different parameters, please make changes in the parm.config file.　　   
-In the current file, minimum variant alele frequency (MIN_VAF), minimu number of reads (MIN_READ_NUMBER) and minimum indel length (MIN_INDEL_LENGTH) (bp) are set ot 0.15, 2 and 100.　　  
-For greater depth of coverage, larger minimu number of reads sould be apprppreate. 　　  
+In the current file, minimum variant allele frequency (MIN_VAF), minimum number of reads (MIN_READ_NUMBER) and minimum indel length (MIN_INDEL_LENGTH) (bp) are set to 0.15, 2 and 100, respectively.　　  
+For greater depth of coverage, larger minimum number of reads should be appropriate. 　　  
 
-We developed this method with nanopore sequence data basecalled by albacore (total error rate =~ 15%), and set minimum indel length to 100bp to remove false potitives. But newer basecallers increase the accuracy and, smaller minimum indel length (50bp or smaller) and lower minimum variant alele frequency (0.1 or lower) can be used.
+We developed this method with nanopore sequence data base-called by albacore (total error rate =~ 15%), and set the minimum indel length to 100bp to remove false positives. However, newer basecallers have increased accuracy, and smaller minimum indel length (50bp or smaller) as well as lower minimum variant allele frequency (0.1 or lower) can be used.
 
 ## Repeat filtering
-If repeat infmarmaiton files are privided, our method filter SV candisates with repeat infromation (Repeat masker, Tandm repeat finder, Segmental duplication, Self-chain). This filter can increase specitficity.
-Please prepare anntaiton files with the fllowing procedures.
+If repeat information files are provided, our method filters SV candidates with the provided repeat information (Repeat masker, Tandem repeat finder, Segmental duplication, Self-chain). The filtering can increase the specificity.
+Please prepare annotation files with the following procedures.
 
 Repeat masker　　     
 Download rmsk.txt from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/
@@ -73,8 +73,8 @@ Download chainSelf.txt file from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/
 python .src/repeat/ucsc_selfchain.py <path to chainSelf.txt> | sort -k1,1 -k2,2g > ./data/chainSelf.txt
 ```
 
-## Preformance
-Performance of this tool is provided in Fujimoto et al. (in rivision).
+## Performance
+Performance of this tool is provided in Fujimoto et al. (in revision).
 
 ## Licence
 GPL
