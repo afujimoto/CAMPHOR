@@ -46,7 +46,7 @@ We developed this method with nanopore sequence data basecalled by albacore (tot
 If repeat infmarmaiton files are privided, our method filter SV candisates with repeat infromation (Repeat masker, Tandm repeat finder, Segmental duplication, Self-chain). This filter can increase specitficity.
 Please prepare anntaiton files with the fllowing procedures.
 
-Repeat masker (Simple_repeat indetified by Repeat masker)　　     
+Repeat masker　　     
 Download rmsk.txt from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/
 ```
 grep Simple_repeat <path to rmsk.txt>|python .src/repeat/rmsk.py /dev/stdin > ./data/rmsk.txt
