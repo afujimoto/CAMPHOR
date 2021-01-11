@@ -41,7 +41,7 @@ sh CAMPHOR.sh ./example/NA18943.chr22.sort_by_name.test.bam ./example/NA18943.ch
 We consider the parameter set in the provided configuration apprppreate for 20x coverage WGS data.  
 If you would like to use different parameters, please make changes in the parm.config file.　　   
 In the current file, minimum variant alele frequency (MIN_VAF), minimu number of reads (MIN_READ_NUMBER) and minimum indel length (MIN_INDEL_LENGTH) (bp) are set ot 0.15, 2 and 100.　　  
-For greater depth of coverage, larger MIN_READ_NUMBER sould be apprppreate. 　　  
+For greater depth of coverage, larger minimu number of reads sould be apprppreate. 　　  
 
 We developed this method with nanopore sequence data basecalled by albacore (total error rate =~ 15%), and set minimum indel length to 100bp to remove false potitives. But newer basecallers increase the accuracy and, smaller minimum indel length (50bp or smaller) and lower minimum variant alele frequency (0.1 or lower) can be used.
 
