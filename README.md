@@ -19,6 +19,8 @@ samtools (0.1.18 or higher)
 ** Index file (.bai) for bam file sorted by genome coordinate         
 ** Fastq file of the sequence data
 
+If samtools is not installed in the environment, the path to execution file of samtools can be specified in the config file (pram.config).  
+
 ## Output file format
 vcf file of SVs (SV.vcf)
 
