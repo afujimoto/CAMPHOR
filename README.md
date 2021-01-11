@@ -30,7 +30,7 @@ sh CAMPHOR.sh <bam(sorted by read name)> <bam(sorted by genome coordinate)> <fas
 ## Example
 ```
 git clone https://github.com/afujimoto/CAMPHOR.git　
-cd CAMPHOR　　
+cd CAMPHOR/CAMPHOR　　
 sh CAMPHOR.sh ./example/NA18943.chr22.sort_by_name.test.bam ./example/NA18943.chr22.sort.test.bam ./example/NA18943.chr22.sort.test.fastq test
 ```
 
