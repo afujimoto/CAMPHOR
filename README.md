@@ -3,7 +3,7 @@ SV caller for long-reads
 
 Overview
 1. Extract reads suggesting SVs from a bam file　　
-2. Idetify SV candidates supported by several support reads　　 
+2. Idetify SV candidates      　 
 3. Filter SV candidates with repeat information and number of support reads　　
 
 ## Requirement
