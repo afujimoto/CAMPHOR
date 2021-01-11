@@ -7,7 +7,8 @@ Overview
 3. Filter SV candidates with repeat information and number of support reads　　
 
 ## Requirement
-python3
+python3       
+pysam module of python
 
 perl
 
