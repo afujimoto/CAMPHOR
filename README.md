@@ -15,8 +15,8 @@ perl
 samtools (0.1.18 or higher)
 
 ## Input file
-** Two bam files (bam sorted by read name and bam sorted by genome coordinate)
-
+** Two bam files (bam sorted by read name and bam sorted by genome coordinate)        
+** Index file (.bai) for bam file sorted by genome coordinate         
 ** Fastq file of the sequence data
 
 ## Output file format
