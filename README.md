@@ -31,7 +31,7 @@ sh CAMPHOR.sh <bam(sorted by read name)> <bam(sorted by genome coordinate)> <fas
 ```
 git clone https://github.com/afujimoto/CAMPHOR.git　
 cd CAMPHOR　　
-sh CAMPHOR.sh <> <> <> <>
+sh CAMPHOR.sh ./example/NA18943.chr22.sort_by_name.test.bam ./example/NA18943.chr22.sort.test.bam ./example/NA18943.chr22.sort.test.fastq test
 ```
 
 ## Parameter setting in configuration file
