@@ -43,7 +43,7 @@ python3 ./src/SV_selection.py $OUTPUT/TRS_candidate.txt 2 > $OUTPUT/TRS_candidat
 
 echo "Filtering deletions"
 #echo "python ./src/DEL_filt.py $OUTPUT/DEL_candidate.txt2 30 5000 8|python ./src/DEL_filt2.py /dev/stdin 20 0.1 100 0.3 0.3,1000,0.1 0.1 300 7 7 $MIN_READ_NUMBER 1 1|python ./src/VAF.py /dev/stdin $SORTED_BAM 0 30 1 4 8 > $OUTPUT/DEL_candidate.txt2.VAF"
-python3 ./src/DEL_filt.py $OUTPUT/DEL_candidate.txt2 30 5000 8|python3 ./src/DEL_filt2.py /dev/stdin 20 0.1 100 0.3 0.3,1000,0.1 0.1 300 7 7 $MIN_READ_NUMBER 1 1|python ./src/VAF.py /dev/stdin $SORTED_BAM 0 30 1 4 8 > $OUTPUT/DEL_candidate.txt2.VAF
+python3 ./src/DEL_filt.py $OUTPUT/DEL_candidate.txt2 30 5000 8|python3 ./src/DEL_filt2.py /dev/stdin 20 0.1 100 0.3 0.3,1000,0.1 0.1 300 7 7 $MIN_READ_NUMBER 1 1|python3 ./src/VAF.py /dev/stdin $SORTED_BAM 0 30 1 4 8 > $OUTPUT/DEL_candidate.txt2.VAF
 
 #echo "python ./src/SB_CH.py $OUTPUT/DEL_candidate.txt2.VAF 300 $SR $RMSK $FASTQ 11 11|python ./src/DEL_filt3.py /dev/stdin 0,500,1000 $MIN_READ_NUMBER,$MIN_READ_NUMBER,$MIN_READ_NUMBER 11 12 50 0.1 $MIN_VAF 9 15 > $OUTPUT/DEL_candidate.filtered.txt"
 python3 ./src/SB_CH.py $OUTPUT/DEL_candidate.txt2.VAF 300 $SR $RMSK $FASTQ 11 11|python3 ./src/DEL_filt3.py /dev/stdin 0,500,1000 $MIN_READ_NUMBER,$MIN_READ_NUMBER,$MIN_READ_NUMBER 11 12 50 0.1 $MIN_VAF 9 15 > $OUTPUT/DEL_candidate.filtered.txt
