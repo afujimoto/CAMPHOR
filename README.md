@@ -62,7 +62,7 @@ In the current file, minimum variant allele frequency (MIN_VAF), minimum number 
 For greater depth of coverage, larger minimum number of reads should be appropriate. 　　  
 
 We developed this method with nanopore sequence data base-called by albacore (total error rate =~ 15%), and set the minimum indel length to 100bp to remove false positives. However, newer basecallers have increased accuracy, and smaller minimum indel length (50bp or smaller) as well as lower minimum variant allele frequency (0.1 or lower) can be used.
-
+   
 ## Repeat filtering
 If repeat information files are provided, our method filters SV candidates with the provided repeat information (Repeat masker, Tandem repeat finder, Segmental duplication, Self-chain). The filtering can increase the specificity.
 Please prepare annotation files with the following procedures.
@@ -102,7 +102,7 @@ curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/simpleRepeat.txt
 curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/genomicSuperDups.txt.gz | zcat | python3 ./src/repeat/seg_dup.py /dev/stdin | sort -k1,1 -k2,2g > ./data/seg_dup.txt
 curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/chainSelf.txt.gz | zcat | python3 ./src/repeat/ucsc_selfchain.py /dev/stdin | sort -k1,1 -k2,2g > ./data/chainSelf.txt
 ```
-
+   
 ## Performance
 Performance of this tool is provided in Fujimoto et al. (in revision).
 
