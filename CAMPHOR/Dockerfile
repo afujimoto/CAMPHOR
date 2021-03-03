@@ -26,6 +26,6 @@ RUN curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/genomicSuper
   | zcat | python3 /CAMPHOR/src/repeat/seg_dup.py /dev/stdin | sort -k1,1 -k2,2g > /CAMPHOR/data/seg_dup.txt
 
 RUN curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/chainSelf.txt.gz \
-  | zcat | python3 /CAMPHOR/src/ucsc_selfchain.py /dev/stdin | sort -k1,1 -k2,2g > /CAMPHOR/data/seg_dup.txt
+  | zcat | python3 /CAMPHOR/src/repeat/ucsc_selfchain.py /dev/stdin | sort -k1,1 -k2,2g > /CAMPHOR/data/seg_dup.txt
 
 CMD sh CAMPHOR.sh ./example/NA18943.chr22.sort_by_name.test.bam ./example/NA18943.chr22.sort.test.bam ./example/NA18943.chr22.sort.test.fastq /out
