@@ -61,7 +61,7 @@ If you would like to use different parameters, please make changes in the parm.c
 In the current file, minimum variant allele frequency (MIN_VAF), minimum number of reads (MIN_READ_NUMBER) and minimum indel length (MIN_INDEL_LENGTH) (bp) are set to 0.15, 2 and 100, respectively.　　  
 For greater depth of coverage, larger minimum number of reads should be appropriate. 　　  
 
-We developed this method with nanopore sequence data base-called by albacore (total error rate =~ 15%), and set the minimum indel length to 100bp to remove false positives. However, newer basecallers have increased accuracy, and smaller minimum indel length (50bp or smaller) as well as lower minimum variant allele frequency (0.1 or lower) can be used.
+We developed this method with nanopore sequence data base-called by albacore (total error rate =~ 15%), and set the minimum indel length to 100bp to remove false positives. However, newer basecallers have increased accuracy, and smaller minimum indel length (50bp or smaller) as well as lower minimum variant allele frequency (0.1 or lower) can be used.     
    
 ## Repeat filtering
 If repeat information files are provided, our method filters SV candidates with the provided repeat information (Repeat masker, Tandem repeat finder, Segmental duplication, Self-chain). The filtering can increase the specificity.
