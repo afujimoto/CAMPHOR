@@ -38,6 +38,23 @@ cd CAMPHOR/CAMPHOR　　
 sh CAMPHOR.sh ./example/NA18943.chr22.sort_by_name.test.bam ./example/NA18943.chr22.sort.test.bam ./example/NA18943.chr22.sort.test.fastq test
 ```
 
+## Installation and usage via Docker
+Install Docker in yor computer, and run the below comamnds to install and run test.
+```
+git clone https://github.com/afujimoto/CAMPHOR
+cd <path to CAMPHOR>
+docker build -t camphor .
+docker run --rm -it -v $PWD:/out camphor
+```
+
+If you want to run for your own data, please run the below comamnds.
+```
+git clone https://github.com/afujimoto/CAMPHOR
+cd <path to CAMPHOR>
+docker build -t camphor .
+docker run --rm -it -v <path to output directory>:/out -v <path to input directory>:/input camphor sh CAMPHOR.sh /input/NA18943.chr22.sort_by_name.test.bam /input/NA18943.chr22.sort.test.bam /input/NA18943.chr22.sort.test.fastq /out/
+```
+
 ## Parameter setting in configuration file
 We consider the parameter set in the provided configuration appropriate for 20x coverage WGS data.  
 If you would like to use different parameters, please make changes in the parm.config file.　　   
