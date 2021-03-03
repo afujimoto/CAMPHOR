@@ -91,6 +91,17 @@ Download chainSelf.txt file from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/
 python .src/repeat/ucsc_selfchain.py <path to chainSelf.txt> | sort -k1,1 -k2,2g > ./data/chainSelf.txt
 ```
 
+Automatatic obtaining the annotation data used from UCSC
+The download and format change for repeat information can be perfoemd with the commnds below.
+```
+cd CAMPHOR/CAMPHOR
+mkdir ./data/
+curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/rmsk.txt.gz | zcat | grep Simple_repeat | python3 ./src/repeat/rmsk.py /dev/stdin > ./data/rmsk.txt
+curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/simpleRepeat.txt.gz | zcat | python3 ./src/repeat/simpleRepeat.py /dev/stdin | sort -k1,1 -k2,2g > ./data/simplerepeat.txt
+curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/genomicSuperDups.txt.gz | zcat | python3 ./src/repeat/seg_dup.py /dev/stdin | sort -k1,1 -k2,2g > ./data/seg_dup.txt
+RUN curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/chainSelf.txt.gz | zcat | python3 ./src/repeat/ucsc_selfchain.py /dev/stdin | sort -k1,1 -k2,2g > ./data/chainSelf.txt
+```
+
 ## Performance
 Performance of this tool is provided in Fujimoto et al. (in revision).
 
