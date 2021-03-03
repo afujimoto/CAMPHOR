@@ -91,6 +91,8 @@ Download chainSelf.txt file from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/
 python .src/repeat/ucsc_selfchain.py <path to chainSelf.txt> | sort -k1,1 -k2,2g > ./data/chainSelf.txt
 ```
 
+
+
 Automatatic obtaining the annotation data used from UCSC
 The download and format change for repeat information can be perfoemd with the commnds below.
 ```
