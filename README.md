@@ -5,7 +5,7 @@ Overview
 1. Extract reads suggesting SVs from a bam file　　
 2. Identify SV candidates      　 
 3. Filter SV candidates with repeat information and number of support reads　　
-
+  
 ## Requirement
 python3       
 pysam module of python
@@ -13,7 +13,7 @@ pysam module of python
 perl
 
 samtools (0.1.18 or higher)
-
+   
 ## Input file
 ** Two bam files (one bam sorted by read name and another sorted by genome coordinates)        
 ** Index file (.bai) for bam file sorted by genome coordinate         
@@ -101,7 +101,7 @@ curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/rmsk.txt.gz | zc
 curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/simpleRepeat.txt.gz | zcat | python3 ./src/repeat/simpleRepeat.py /dev/stdin | sort -k1,1 -k2,2g > ./data/simplerepeat.txt
 curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/genomicSuperDups.txt.gz | zcat | python3 ./src/repeat/seg_dup.py /dev/stdin | sort -k1,1 -k2,2g > ./data/seg_dup.txt
 curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/chainSelf.txt.gz | zcat | python3 ./src/repeat/ucsc_selfchain.py /dev/stdin | sort -k1,1 -k2,2g > ./data/chainSelf.txt
-```
+```   
    
 ## Performance
 Performance of this tool is provided in Fujimoto et al. (in revision).
