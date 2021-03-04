@@ -125,7 +125,7 @@ Performance of this tool is provided in Fujimoto et al. (in revision).
 
 ## Licence
 
-GPL
+GPLv3
 
 ## Contact
 
