@@ -92,7 +92,7 @@ python .src/repeat/ucsc_selfchain.py <path to chainSelf.txt> | sort -k1,1 -k2,2g
 ```
      
 Automatatic obtaining the annotation data used from UCSC  
-Download and format change for repeat information can be perfoemd with the commnds below.
+Download and format change for repeat information can be performed with the commnds below.
 ```
 cd CAMPHOR/CAMPHOR
 mkdir ./data/
