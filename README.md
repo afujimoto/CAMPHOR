@@ -3,17 +3,17 @@
 SV caller for long-reads
 
 Overview
-1. Extract reads suggesting SVs from a bam file
-2. Identify SV candidates
-3. Filter SV candidates with repeat information and number of support reads
+1.	Extract reads suggesting presence of SVs from a bam file
+2.	Identify SV candidates
+3.	Filter SV candidates using repeats information and number of support reads
 
 ## Requirement
 
 * python3
 * pysam module of python
-* numpy
+* numpy module
 * perl
-* samtools (0.1.18 or higher)
+* samtools (version 0.1.18 or higher)
 
 ## Input file
 
@@ -43,7 +43,7 @@ $ sh CAMPHOR.sh ./example/NA18943.chr22.sort_by_name.test.bam ./example/NA18943.
 ```
 ## Installation and usage via Docker
 
-Install Docker in yor computer, and run the below commands to install and run test.
+Install Docker in your computer, and run the following commands to install and run test.
 
 __Currently,CAMPHOR requires 16GB memory at build.__
 
@@ -54,7 +54,7 @@ $ docker build -t camphor .
 $ docker run --rm -it -v $PWD:/out camphor
 ```
 
-If you want to run for your own data, please run the below commands.
+If you want to run your own data, please run the following commands.
 
 ```shell
 $ git clone https://github.com/afujimoto/CAMPHOR
@@ -63,7 +63,7 @@ $ docker build -t camphor .
 $ docker run --rm -it -v <path to output directory>:/out -v <path to input directory>:/input camphor sh CAMPHOR.sh /input/NA18943.chr22.sort_by_name.test.bam /input/NA18943.chr22.sort.test.bam /input/NA18943.chr22.sort.test.fastq /out/
 ```
 
-## Parameter setting in configuration file
+## Parameter settings in configuration file
 
 We consider the parameter set in the provided configuration appropriate for 20x coverage WGS data.
 If you would like to use different parameters, please make changes in the parm.config file.
@@ -109,8 +109,7 @@ Download chainSelf.txt file from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/
 $ python .src/repeat/ucsc_selfchain.py <path to chainSelf.txt> | sort -k1,1 -k2,2g > ./data/chainSelf.txt
 ```
 
-Automatic obtaining the annotation data used from UCSC
-Download and format change for repeat information can be performed with the commands below.
+Obtaining the annotation data used from UCSC Download and format change for repeat information can be performed automatically with the commands below.   
 
 ```shell
 $ cd CAMPHOR/CAMPHOR
