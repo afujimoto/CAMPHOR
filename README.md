@@ -106,7 +106,7 @@ curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/chainSelf.txt.gz
 Performance of this tool is provided in Fujimoto et al. (in revision).
 
 ## Licence
-GPL
+GPLv3
 
 ## Contact
 
