@@ -131,8 +131,7 @@ For the format change, the following commands were used.
 Sniffles  
 ```shell 
 python3 change_vcf_format_Sniffles.py <vcf from sniffles> 
-```  
-Sniffles  
+```    
 SVIM
 ```shell 
 python3 change_vcf_format_SVIM.py <vcf from SVIM>  
