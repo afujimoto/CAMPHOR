@@ -130,7 +130,7 @@ The performance comparison in Fujimoto et al. was performed as follows.
 <chr> <start> <chr> <end> <SV type (DEL or INS)> <length (bp)>  
 
 For the format change, the following commands were used.  
-            Sniffles  
+                                    Sniffles  
    ```shell 
    $python3 change_vcf_format_Sniffles.py <vcf from sniffles> 
    ```  
