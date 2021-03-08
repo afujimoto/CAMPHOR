@@ -122,8 +122,22 @@ $ curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/chainSelf.txt.
 
 ## Performance
 
-Performance of this tool is provided in the following publications; Fujimoto et al. Whole genome sequencing with long-reads reveals complex structure and origin of structural variation in human genetic variations and somatic mutations in cancer. Genome Medicine (2021).    
+Performance of this tool is provided in the following publications; Fujimoto et al. Whole genome sequencing with long-reads reveals complex structure and origin of structural variation in human genetic variations and somatic mutations in cancer. Genome Medicine (2021).   
 
+The performance comparison in Fujimoto et al. was performed as follows     
+1.	Indels in vcf files were extracted and converted to the following format.  
+<chr> <start> <chr> <end> <SV type (DEL or INS)> <length (bp)>  
+For the format change, the following commands were used.  
+Sniffles  
+python3 change_vcf_format_Sniffles.py <vcf from sniffles>  
+SVIM  
+python3 change_vcf_format_SVIM.py <vcf from SVIM>  
+Gold standard set  
+python3 change_vcf_format_GS.py <NA19240.BIP-unified.vcf>  
+CAMPHOR  
+<SVtype>_candidate.filtered.txt files were used.  
+2.	SV lists were compared with the following command  
+python3 compare_SV_files.3.all.py <SV list of the gold standard set generated in step1> <SV list of the each caller generated in step1> 500 120  
 
 ## Licence
 
