@@ -119,7 +119,7 @@ $ curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/simpleRepeat.t
 $ curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/genomicSuperDups.txt.gz | zcat | python3 ./src/repeat/seg_dup.py /dev/stdin | sort -k1,1 -k2,2g > ./data/seg_dup.txt
 $ curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/chainSelf.txt.gz | zcat | python3 ./src/repeat/ucsc_selfchain.py /dev/stdin | sort -k1,1 -k2,2g > ./data/chainSelf.txt
 ```
-
+    
 ## Performance
 
 Performance of this tool is provided in the following publications; Fujimoto et al. Whole genome sequencing with long-reads reveals complex structure and origin of structural variation in human genetic variations and somatic mutations in cancer. Genome Medicine (2021).   
@@ -153,7 +153,8 @@ CAMPHOR
 ```shell 
 $python3 ./src/SV_comparison.py <SV list of the gold standard set generated in step2> <SV list of the each caller generated in step2> 500 120  
 ```  
-  
+      
+      
 ## Licence
 
 GPLv3
