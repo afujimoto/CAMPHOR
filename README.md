@@ -131,7 +131,7 @@ For the format change, the following commands were used.
 Sniffles  
 ```shell 
 python3 change_vcf_format_Sniffles.py <vcf from sniffles> 
-```    
+```  
 SVIM
 ```shell 
 python3 change_vcf_format_SVIM.py <vcf from SVIM>  
@@ -139,7 +139,7 @@ python3 change_vcf_format_SVIM.py <vcf from SVIM>
 Gold standard set
 ```shell 
 python3 change_vcf_format_GS.py <NA19240.BIP-unified.vcf> 
-```  
+```
 CAMPHOR  
 \<SVtype\>_candidate.filtered.txt files were used. 
   
