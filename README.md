@@ -82,7 +82,7 @@ Please prepare annotation files with the following procedures.
 Download rmsk.txt from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/
 
 ```shell
-$ grep Simple_repeat <path to rmsk.txt>|python .src/repeat/rmsk.py /dev/stdin > ./data/rmsk.txt
+$ grep Simple_repeat <path to rmsk.txt>|python3 .src/repeat/rmsk.py /dev/stdin > ./data/rmsk.txt
 ```
 
 ### Tandem repeat
@@ -90,7 +90,7 @@ $ grep Simple_repeat <path to rmsk.txt>|python .src/repeat/rmsk.py /dev/stdin > 
 Download simpleRepeat.txt from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/
 
 ```shell
-$ python ./src/repeat/simpleRepeat.py <path to simpleRepeat.txt>|sort -k1,1 -k2,2g > ./data/simplerepeat.txt
+$ python3 ./src/repeat/simpleRepeat.py <path to simpleRepeat.txt>|sort -k1,1 -k2,2g > ./data/simplerepeat.txt
 ```
 
 ### Segmental duplication
@@ -98,7 +98,7 @@ $ python ./src/repeat/simpleRepeat.py <path to simpleRepeat.txt>|sort -k1,1 -k2,
 Download genomicSuperDups.txt from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/
 
 ```shell
-$ python ./src/repeat/seg_dup.py <path to genomicSuperDups.txt>|sort -k1,1 -k2,2g > ./data/seg_dup.txt
+$ python3 ./src/repeat/seg_dup.py <path to genomicSuperDups.txt>|sort -k1,1 -k2,2g > ./data/seg_dup.txt
 ```
 
 ### Self-chain
@@ -106,7 +106,7 @@ $ python ./src/repeat/seg_dup.py <path to genomicSuperDups.txt>|sort -k1,1 -k2,2
 Download chainSelf.txt file from http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/
 
 ```shell
-$ python .src/repeat/ucsc_selfchain.py <path to chainSelf.txt> | sort -k1,1 -k2,2g > ./data/chainSelf.txt
+$ python3 .src/repeat/ucsc_selfchain.py <path to chainSelf.txt> | sort -k1,1 -k2,2g > ./data/chainSelf.txt
 ```
 
 Obtaining the annotation data used from UCSC Download and format change for repeat information can be performed automatically with the commands below.   
