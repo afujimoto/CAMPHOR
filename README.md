@@ -122,7 +122,7 @@ $ curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/chainSelf.txt.
 
 ## Performance
 
-Performance of this tool is provided in Fujimoto et al. (in revision).
+Performance of this tool is provided in the following publications; Fujimoto et al. Whole genome sequencing with long-reads reveals complex structure and origin of structural variation in human genetic variations and somatic mutations in cancer. Genome Medicine (2021).    
 
 ## Licence
 
