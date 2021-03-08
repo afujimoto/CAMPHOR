@@ -126,7 +126,11 @@ Performance of this tool is provided in the following publications; Fujimoto et 
 
 The performance comparison in Fujimoto et al. was performed as follows.     
 
-1.	Indels in vcf files were extracted and converted to the following format.  
+1.	Read selection was performed with the following script. This script divides a large fastq file to small ones
+```shell 
+python3 ./src/split_fastq_with_number.py <input fastq file> <output fastq file> <number of files>
+```  
+2.	Indels in vcf files were extracted and converted to the following format.  
 \<chr\> \<start\> \<chr\> \<end\> \<SV type (DEL or INS)\> \<length (bp)\>  
 
 For the format change, the following commands were used.  
@@ -145,9 +149,9 @@ $python3 ./src/change_vcf_format_GS.py <NA19240.BIP-unified.vcf>
 CAMPHOR  
 \<SVtype\>_candidate.filtered.txt files were used. 
   
-2.	SV lists were compared with the following command 
+3.	SV lists were compared with the following command 
 ```shell 
-$python3 ./src/SV_comparison.py <SV list of the gold standard set generated in step1> <SV list of the each caller generated in step1> 500 120  
+$python3 ./src/SV_comparison.py <SV list of the gold standard set generated in step2> <SV list of the each caller generated in step2> 500 120  
 ```  
   
 ## Licence
