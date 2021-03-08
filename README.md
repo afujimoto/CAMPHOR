@@ -141,7 +141,8 @@ Gold standard set
 python3 change_vcf_format_GS.py <NA19240.BIP-unified.vcf> 
 ```  
 CAMPHOR  
-\<SVtype\>_candidate.filtered.txt files were used.    
+\<SVtype\>_candidate.filtered.txt files were used. 
+  
 2.	SV lists were compared with the following command 
 ```shell 
 python3 compare_SV_files.3.all.py <SV list of the gold standard set generated in step1> <SV list of the each caller generated in step1> 500 120  
