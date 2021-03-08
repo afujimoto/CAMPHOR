@@ -127,7 +127,7 @@ Performance of this tool is provided in the following publications; Fujimoto et 
 The performance comparison in Fujimoto et al. was performed as follows.     
 
 1.	Indels in vcf files were extracted and converted to the following format.  
-<chr> <start> <chr> <end> <SV type (DEL or INS)> <length (bp)>  
+\<chr\> \<start\> \<chr\> \<end\> \<SV type (DEL or INS)\> \<length (bp)\>  
 
 For the format change, the following commands were used.  
 Sniffles  
