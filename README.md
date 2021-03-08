@@ -125,6 +125,7 @@ $ curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/chainSelf.txt.
 Performance of this tool is provided in the following publications; Fujimoto et al. Whole genome sequencing with long-reads reveals complex structure and origin of structural variation in human genetic variations and somatic mutations in cancer. Genome Medicine (2021).   
 
 The performance comparison in Fujimoto et al. was performed as follows.     
+
 1.	Indels in vcf files were extracted and converted to the following format.  
 <chr> <start> <chr> <end> <SV type (DEL or INS)> <length (bp)>  
 
