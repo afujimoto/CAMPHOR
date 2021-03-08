@@ -120,6 +120,9 @@ $ curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/genomicSuperDu
 $ curl -L http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/chainSelf.txt.gz | zcat | python3 ./src/repeat/ucsc_selfchain.py /dev/stdin | sort -k1,1 -k2,2g > ./data/chainSelf.txt
 ```   
     
+    
+    
+    
 ## Performance   
 
 Performance of this tool is provided in the following publications; Fujimoto et al. Whole genome sequencing with long-reads reveals complex structure and origin of structural variation in human genetic variations and somatic mutations in cancer. Genome Medicine (2021).   
