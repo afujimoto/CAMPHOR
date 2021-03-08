@@ -147,7 +147,7 @@ CAMPHOR
   
 2.	SV lists were compared with the following command 
 ```shell 
-$python3 ./src/compare_SV_files.3.all.py <SV list of the gold standard set generated in step1> <SV list of the each caller generated in step1> 500 120  
+$python3 ./src/SV_comparison.py <SV list of the gold standard set generated in step1> <SV list of the each caller generated in step1> 500 120  
 ```  
   
 ## Licence
