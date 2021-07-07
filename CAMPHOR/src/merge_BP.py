@@ -86,6 +86,14 @@ def define_BP_with_ovrelap(read_l0, overlap_prop):
 	for i in range(len(read_l) - 1):
 		for j in range(i + 1, len(read_l)):
 			del_OL_length = min(int(read_l[i][3]), int(read_l[j][3])) - max(int(read_l[i][1]), int(read_l[j][1])) + 1	
+#			print(read_l[i])
+#			print(read_l[i][6])
+
+			if read_l[i][6] == "0":
+				read_l[i][6] = "1"
+			if read_l[j][6] == "0":
+				read_l[j][6] = "1"
+
 			if del_OL_length > 0 and float(del_OL_length)/float(read_l[i][6]) >= overlap_prop and float(del_OL_length)/float(read_l[j][6]) >= overlap_prop:
 				found = 0
 				for read_grp_num_tmp in read_grp:
@@ -199,6 +207,7 @@ for line in SV_BP_f:
                 if len(BP_grp) == 1:
                         print(BP_grp[0])
                 if len(BP_grp) > 1:
+#                        print("BP_grp", BP_grp)
                         newbreakpoints = define_BP_with_ovrelap(BP_grp, overlap_prop)
                         for BP in newbreakpoints:                
                                 print(BP)
