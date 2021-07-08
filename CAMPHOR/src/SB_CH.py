@@ -94,6 +94,7 @@ f = open(fastq_file)
 total_num_read = len(read_name)
 for line in f:
 	if line[0] == "@":
+		line = line.replace("\n", "")
 		read_name_fastq = (line.split(" "))[0]
 		read_name_fastq = read_name_fastq.replace("@", "")
 		if read_name_fastq in read_name:
